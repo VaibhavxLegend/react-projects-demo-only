@@ -1,0 +1,47 @@
+import React,{useState} from "react";
+
+var emojiDictionary = {
+    "🌧️": "Cloudy, rainy",
+    "🌪️": "Tornado",
+    "☔": "Umbrella with raindrops",
+    "☕": "Coffee",
+    "📖": "Book",
+    "🌊": "Wave",
+    "🌈": "Rainbow",
+    "😔": "Rain Sad",
+    "😊": "Rain Happy",
+    "🐛": "Caterpillar",
+    "🤧": "Sick",
+  };
+
+const EmojiDisplay = () => {
+  const [meaning, setMeaning] = useState("");
+
+  const handleClick = (emoji) => {
+    setMeaning(emojiDictionary[emoji]);
+  };
+
+  return (
+    <div>
+      <h1>Emoji Dictionary</h1>
+      <div>
+        {Object.keys(emojiDictionary).map((emoji) => (
+          <span
+            key={emoji}
+            style={{ cursor: "pointer", margin: "0 10px" }}
+            onClick={() => handleClick(emoji)}
+          >
+            {emoji}
+          </span>
+        ))}
+      </div>
+      {meaning && (
+        <div style={{ marginTop: "20px", fontSize: "1.5rem" }}>
+          Meaning: {meaning}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default EmojiDisplay;

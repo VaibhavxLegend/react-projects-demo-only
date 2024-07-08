@@ -1,0 +1,26 @@
+.heading{
+    background: yellow;
+    margin: 10px;
+    text-align: center;
+    padding: 5vh;
+    font-size:x-large;
+    font-weight: 500;
+}
+
+.heading_2{
+    text-align: center;
+    font-size: x-large;
+}
+
+.input_box{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.input{
+    justify-content: center;
+    margin: 10px;
+    padding: 15px 40px;
+}
